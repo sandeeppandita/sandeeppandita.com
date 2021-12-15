@@ -200,22 +200,22 @@
                             <form id="contact" class="js_contact_form">
                                 <div class="field-group">
                                     <div class="field">
-                                        <label for="name">Name</label>
-                                        <input type="text" name="name" class="input"> 
+                                        <label for="name">Name *</label>
+                                        <input type="text" name="name" class="input" required max="30"> 
                                     </div>
                                     <div class="field">
-                                        <label for="email">Email</label>
-                                        <input type="text" name="email" class="input"> 
+                                        <label for="email">Email *</label>
+                                        <input type="email" name="email" class="input" required> 
                                     </div>
                                 </div>
                                 <div class="field-group">
                                     <div class="field">
                                         <label for="phone">Phone</label>
-                                        <input type="text" name="phone" class="input"> 
+                                        <input type="text" name="phone" class="input" max="10" pattern="\d+"> 
                                     </div>
                                     <div class="field">
-                                        <label for="name">Reason</label>
-                                        <select name="pets" id="reason">
+                                        <label for="name">Reason *</label>
+                                        <select name="pets" id="reason" required>
                                             <option value="">Please choose a reason</option>
                                             <option value="Just Saying Hi">Just Saying Hi</option>
                                             <option value="Freelance Work">Freelance Work</option>
@@ -225,8 +225,8 @@
                                 </div> 
                                 <div class="field-group">
                                     <div class="field">
-                                        <label for="name">Message</label>
-                                        <textarea type="text" name="name" rows="4" class="input"></textarea> 
+                                        <label for="name">Message *</label>
+                                        <textarea type="text" name="name" rows="4" class="input" required max="200"></textarea> 
                                     </div>
                                 </div>
                                 <div class="field">

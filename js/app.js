@@ -7,6 +7,7 @@ var mqMobile = window.matchMedia('(max-width: 992px)');
 $('document').ready(function(e){
     
     // Loading page preloader handler
+    $('body').addClass('freeze');
     setTimeout(HandlePreloader,5000);
     
     // Handle Navigation Menu 
@@ -33,9 +34,13 @@ mqMobile.addEventListener('change', SetupInitialSceneOnChange);
 
 //custom functions
 function HandlePreloader(){
+
     $('#loading_page').delay(300).fadeOut(500, function(){
         SetupInitialScene();
     });
+
+    $('body').removeClass('freeze');
+
     $('#loading_loader').addClass('animate');
     $('#loading_name').addClass('animate');
     $('#loading_desig').addClass('animate');
@@ -62,7 +67,6 @@ function SetupInitialScene(){
         setTimeout(function(){
             $('.nav-toggle').removeClass('animate');
         },1000);
-
     }
 }   
 
