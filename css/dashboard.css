@@ -1,0 +1,120 @@
+﻿/*dashboard - begin*/
+.dashboard{    
+    width: 100%;
+    height: 100vh;
+    /*background-color: #fd0202;*/
+    background-color: #EC4134;
+    color:#fff;
+}   
+.navbar{
+    padding: 1% 5%;
+    overflow: hidden;
+/*    border-bottom: 1px solid #ea0000;
+    box-shadow: 0px 2px 5px #f70808;*/
+    border-bottom: 1px solid #bf352b;
+    box-shadow: 0px 2px 5px #d43023;
+}
+.navbar__logo{
+    width: 20%;
+    float: left;
+}
+.navbar__logo--alt{display:none;}
+.navbar__logo-title{
+    font-size: 25px;
+    font-weight: 900;
+    padding: 8px 8px 8px 8px;
+    background-color: #fff;
+    color: #fd0202;
+    border-radius: 25px;
+    border: 1px solid #fff;
+    font-style: italic;
+    display: inline-block;
+    opacity:1;
+    
+    
+    transform: skewX(0deg) translateX(0px);
+    transition: all .5s cubic-bezier(0.6, -0.28, 0.74, 0.05);
+}
+.navbar__menu-holder{
+    width: 80%;
+    float: right;
+    text-align: right;
+    margin:1% 0 0 0;
+}
+.navbar__head{
+    display: none;
+} 
+.navbar__menu{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.navbar__menu-links{
+    display: inline-block;
+    margin: 0 0 0 30px;
+}
+.navbar__menu-links a{
+    color: #fafafa;
+    text-decoration: none;
+    position: relative;
+    padding: 25px 0;
+}
+.navbar__menu-links a:hover:after{
+    content:"";
+    color:#fff;
+    cursor: pointer;
+    opacity:.8;
+    transform: translateY(-20px);
+}
+.navbar__menu-links a:after{
+    content: "";
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    background-color: #fff;
+    opacity: 1;
+    opacity: 0;
+    
+    transition: all .2s ease;
+    transform: translateY(-10px);
+}
+
+/*hero - begins*/
+.hero{
+    text-align: center;
+    position: relative;
+    top: 35%;
+    transform: translateY(-50%);}
+.hero__text{}
+.hero__text-v1{
+    font-size: 24px;}
+.hero__text-v2{
+    font-size: 55px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.hero__text-v3{
+    font-size: 18px;
+    color: #fff;
+    width: 80%;
+    margin: 10px auto;
+    line-height: 28px;}
+.hero__text-skills{margin: 25px 0 0 0;padding:0;list-style-position: inside;}
+.hero__text-skill{
+    display: inline-block;
+    padding: 5px 15px;
+    margin: 0px 5px;
+    border: 2px solid #b02b22;
+    color: #9c2b22;
+    font-weight: 900;
+    letter-spacing: 2px;
+    box-shadow: 0px 3px 2px #cc3a2f;
+}
+.u_break-lg{
+    /* display: block; */
+}
+/*hero - ends*/
+
+/*dashboard - ends*/
