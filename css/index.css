@@ -350,10 +350,6 @@ form .field select {
   border: none;
   outline: none;
 }
-form .field select {
-}
-form .field textarea {
-}
 .btn {
   border: none;
   padding: 16px 30px;

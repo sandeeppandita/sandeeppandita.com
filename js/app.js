@@ -7,7 +7,7 @@ var mqMobile = window.matchMedia('(max-width: 992px)');
 $('document').ready(function(e){
     
     // Loading page preloader handler
-    setTimeout(HandlePreloader,200);
+    setTimeout(HandlePreloader,5000);
     
     // Handle Navigation Menu 
     HandleNavigationMenu(); 
