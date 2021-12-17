@@ -1,6 +1,6 @@
-﻿<!DOCTYPE html>
+﻿<!DOCTYPE html> 
 <html>
-    <head>
+    <head>  
         <title> Freelancer, UI/UX Manager, Team Lead, Developer | Sandeep Pandita India </title>
         <meta name="description" content="Sandeep Pandita is currently working as an Associate Manager at Newfold Digital India. He started as UI Developer role to Sr. Web Developer then Team Lead, he has worked on, delivered, managed, and led projects of different scale on a variety of tech stacks. "> 
         
@@ -14,8 +14,20 @@
         <link href="css/index.css" type="text/css" rel="stylesheet"/>
         <link href="css/responsive.css" type="text/css" rel="stylesheet"/>
 
-    </head> 
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-TTXCMQJ');</script>
+        <!-- End Google Tag Manager -->
+
+    </head>   
     <body> 
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TTXCMQJ"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
 
         <!--pre laoder - begin-->
         <div id="loading_page" class="preloader"> 
@@ -195,43 +207,53 @@
                                 
                             </div>  --> 
                         </div>
-                        <div class="form">
+                        <div class="form"> 
 
-                            <form id="contact" class="js_contact_form">
+                            <form id="contact" class="js_contact_form" method="post">
                                 <div class="field-group">
                                     <div class="field">
                                         <label for="name">Name *</label>
-                                        <input type="text" name="name" class="input" required max="30"> 
+                                        <input type="text" name="name" class="input" max="30">
+                                        <div class="error" error-key="name"></div> 
                                     </div>
                                     <div class="field">
                                         <label for="email">Email *</label>
-                                        <input type="email" name="email" class="input" required> 
+                                        <input type="email" name="email" class="input" > 
+                                        <div class="error" error-key="email"></div> 
                                     </div>
                                 </div>
-                                <div class="field-group">
+                                <div class="field-group">   
                                     <div class="field">
                                         <label for="phone">Phone</label>
-                                        <input type="text" name="phone" class="input" max="10" pattern="\d+"> 
+                                        <input type="text" name="phone" class="input" maxlength="10" pattern="\d+"> 
+                                        <div class="error" error-key="phone"></div> 
                                     </div>
                                     <div class="field">
-                                        <label for="name">Reason *</label>
-                                        <select name="pets" id="reason" required>
-                                            <option value="">Please choose a reason</option>
+                                        <label for="topic">Topic *</label>
+                                        <select name="topic" id="topic">
+                                            <option value="">Please choose a topic</option>
                                             <option value="Just Saying Hi">Just Saying Hi</option>
                                             <option value="Freelance Work">Freelance Work</option>
                                             <option value="Consulting">Consulting</option>
                                         </select>
+                                        <div class="error" error-key="topic"></div> 
                                     </div>
-                                </div> 
+                                </div>  
                                 <div class="field-group">
                                     <div class="field">
-                                        <label for="name">Message *</label>
-                                        <textarea type="text" name="name" rows="4" class="input" required max="200"></textarea> 
+                                        <label for="message">Message *</label>
+                                        <textarea name="message" rows="4" class="input" max="200"></textarea> 
+                                        <div class="error" error-key="message"></div> 
                                     </div>
-                                </div>
+                                </div> 
                                 <div class="field">
-                                    <input type="submit" name="Submit" class="btn btn-primary"> 
+                                    <input id="js_btn_submit" type="submit" name="Submit" class="btn btn-primary"> 
                                 </div>
+
+                                <div class="field">
+                                    <div class="thankyou"> </div>
+                                </div>
+
                             </form>
                         
                         </div>
@@ -245,7 +267,7 @@
         <!-------------------->
     </body>
 
-    <script src="js/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="js/app.js" type="text/javascript" ></script>
 
 </html>

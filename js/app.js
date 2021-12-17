@@ -8,7 +8,7 @@ $('document').ready(function(e){
     
     // Loading page preloader handler
     $('body').addClass('freeze');
-    setTimeout(HandlePreloader,5000);
+    setTimeout(HandlePreloader,200);
     
     // Handle Navigation Menu 
     HandleNavigationMenu(); 
@@ -21,6 +21,9 @@ $('document').ready(function(e){
     
     // Mobile navigation toggle click
     $('.nav-toggle').on('click', ShowSideMenu);
+
+    // Contact form submit handler
+    $('.js_contact_form').on('submit', SubmitContactForm); 
 
 });
 
@@ -142,14 +145,12 @@ function HandleNavigationMenuOnChange(event){
 } 
 
 function NavigationDesktopClickHandler(event){
-    console.log("Click event on desktop");
     event.preventDefault();
 
     ScrollNavigationMenu(this);
 }   
 
 function NavigationMobileClickHandler(){
-    console.log("Click event on mobile");
 
     ScrollNavigationMenu(this); 
 
@@ -165,7 +166,7 @@ function ScrollNavigationMenu(_this){
     var target = $.attr(_this, 'href');
     ScrollTo(target);
 }
-
+ 
 function ScrollTo(target){
     $('html, body').animate({
         scrollTop: $(target).offset().top
@@ -179,6 +180,39 @@ function ToggleMenuStatus(){
     $(this).addClass("active");
 }
 
+function SubmitContactForm(event){ 
+    event.preventDefault();
+
+    $('.error').removeClass('show').text('');
+
+    $.ajax({    
+        type: "POST",
+        url: '../handlers/contact.php',
+        data: $(this).serialize(),
+        success: function(response) 
+        {
+            response = JSON.parse(response);
+
+            if(response.status == 'FAILED'){
+                if(response.key == 'VALIDATIONERRORS'){
+                    var errors = JSON.parse(response.data);
+
+                    for (var key in errors) {
+                        $('.error[error-key="'+key+'"]').addClass('show').text(errors[key]);
+                    }
+                }
+            }else{      
+                if(response.key == 'FORMSUBMITTED'){     
+                    $(".js_contact_form")[0].reset();
+                    $('.error').removeClass('show').text('');
+                    $('.thankyou').addClass('show').text(response.data);
+                }   
+            } 
+
+        }
+    });
+
+}
 
 
 
