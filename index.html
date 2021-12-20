@@ -29,6 +29,7 @@
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- End Google Tag Manager (noscript) -->
 
+
         <!--pre laoder - begin-->
         <div id="loading_page" class="preloader"> 
             <div class="preloader-content">
@@ -41,9 +42,10 @@
         <!--pre laoder - ends-->
 
 
-        <!--home page - begin -->
-        <!---------------------->
+        <!--home page - begin --> 
+        <!----------------------> 
         <div class="homepage"> 
+            <div class="overlay js_overlay"></div> 
             <div class="nav-toggle">
                 <span></span>
                 <span></span>
@@ -51,25 +53,28 @@
             </div>
             <div class="nav-home">
                 <div class="nav-menu"> 
-                    <div class="photo"></div>
+                    <div class="photo"></div>  
                     <ul id="nav-menu">
                         <li data-menu-key="about" class="active"> <a href="#about">About</a> </li>
-                        <li data-menu-key="resume"> <a href="#resume">Resume</a> </li>
                         <li data-menu-key="skills"> <a href="#skills">Skills</a> </li>
+                        <li data-menu-key="resume"> <a href="#resume">Resume</a> </li>
                         <!-- <li data-menu-key="3">Portfolio</li> -->
                         <!-- <li data-menu-key="4">Blog</li> -->
                         <li data-menu-key="contact"> <a href="#contact">Contact</a> </li>  
                     </ul>
-                </div>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/panditasandeep" target="_blank" class="linkedin">in</a>
+                    </div>
+                </div> 
             </div>
 
-            <div id="fullpage" class="scroll-area"> 
+            <div class="scroll-area"> 
                 <!--right column into - start -->
                 <div id="about" data-sec-name="about" id="sec-intro"  class="section active intro-home" style="background-color: #4056A1">
                     <div class="intro-home-content">
                         
                         <div class="about-me">
-                            <div class="name"><strong>Hi, I’m Sandy. Nice to meet you.</strong> </div>
+                            <div class="name"><h2>Hi, I’m Sandeep. Nice to meet you.</h2> </div>
                             <div class="desig">Few words about me</div> 
                             <div class="intro"> 
                                 <p> 
@@ -113,7 +118,7 @@
                             </p>
                         </blockquote>
                         <div class="about-me">
-                            <div class="name"> <strong>My Resume</strong> </div>
+                            <div class="name"> <h2>My Resume</h2> </div>
                             <div class="desig">For more detailed journey of my professional work</div>
                             <div class="intro">
                                 <p><span class="link-underline"><a href="#">Click to download </a> </span></p>
@@ -129,7 +134,7 @@
                 <div id="skills" data-sec-name="skills" id="sec-skills" class="section intro-home" style="background-color: #22577E">
                     <div class="intro-home-content">
                         <div class="about-me">
-                            <div class="name"> <strong>My Skills</strong> </div>
+                            <div class="name"> <h2>My Skills</h2> </div>
                             <div class="desig">These are the skills i have accquired over a period of time</div>
                             <!-- <div class="intro">
                                 
@@ -201,7 +206,7 @@
                 <div id="contact" data-sec-name="contact" id="sec-contact" class="section intro-home" style="background-color: #472c74">
                     <div class="intro-home-content">
                         <div class="about-me">
-                            <div class="name"> <strong>Get In Touch </strong> </div> 
+                            <div class="name"> <h2>Get In Touch </h2> </div> 
                             <div class="desig">Feel feel to reach out to me anytime</div>
                             <!-- <div class="intro">
                                 
@@ -215,7 +220,7 @@
                                         <label for="name">Name *</label>
                                         <input type="text" name="name" class="input" max="30">
                                         <div class="error" error-key="name"></div> 
-                                    </div>
+                                    </div> 
                                     <div class="field">
                                         <label for="email">Email *</label>
                                         <input type="email" name="email" class="input" > 

@@ -118,3 +118,96 @@
 /*hero - ends*/
 
 /*dashboard - ends*/
+
+
+@media screen and (max-width: 768px){
+    
+    .navbar{padding:10px 25px;}
+    .navbar__menu-holder{
+        position: fixed;
+        right: 0;
+        width: 250px;
+        top: 0px;
+        height: 100%;
+        z-index: 9;
+        margin: 0;
+        background-color: #fff;
+        
+        transition: all .3s ease;
+        transform: translateX(250px);
+    }
+    .navbar__menu-holder--show {
+        transform: translateX(0px);
+    }
+    .navbar__logo--alt{padding:7px 20px;text-align: left;display:block;}
+    .navbar__logo-title--dash-out{
+        transform: skewX(-15deg) translateX(110px);
+        opacity:0;
+    }
+    .navbar__logo-title-invert{
+        background-color: #f00;
+        color: #fff;
+        transform: skewX(-20deg) translateX(15px);
+        opacity: 0;
+    }
+    .navbar__logo-title-invert--dash-in{
+        transform: skewX(0deg) translateX(0px);
+        opacity: 1;
+    }
+    .navbar__head{
+        color: #000;
+        width: auto;
+        height: 20px;
+        float: right;
+        padding: 14px;
+        display: block;
+        position: relative;
+        z-index: 99;
+    }
+    
+    .navbar__head-burger{
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;}
+    .navbar__head-line{
+        width: 100%;
+        height: 3px;
+        background-color: #fff;
+        position: absolute;
+        display: block;
+        left: 0;
+        transition: all .8s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    }
+    .navbar__head-line--1{top:0px;}
+    .navbar__head-line--2{top:8px;}
+    .navbar__head-line--3{top:16px;}
+    
+    .navbar__head--alt .navbar__head-line{
+        background-color: #fd0202;
+    }
+    .navbar__head--alt .navbar__head-line--1{transform: translateY(8px) rotate(-45deg);}
+    .navbar__head--alt .navbar__head-line--2{opacity:0;}
+    .navbar__head--alt .navbar__head-line--3{transform: translateY(-8px) rotate(45deg);}
+    
+    
+    .navbar__menu{
+        margin: 20px 0 0 0;
+    }
+    .navbar__menu-links {
+        display: block;
+        /* border-bottom: 1px solid #e8e8e8; */
+        margin: 0 auto;
+        text-align: left;
+    }
+    .navbar__menu-links a {
+        padding: 10px 25px;
+        display: block;
+        cursor: pointer;
+        color: #444;
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .navbar__menu-links a:hover{color:#333;}
+    .navbar__menu-links a:hover:after{opacity:0;}
+}
