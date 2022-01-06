@@ -2,13 +2,12 @@
 var mqMobile = window.matchMedia('(max-width: 992px)');
 
 
-
 // Page load events
 $('document').ready(function(e){ 
     
     // Loading page preloader handler
     $('body').addClass('freeze');
-    setTimeout(HandlePreloader, 5000);
+    setTimeout(HandlePreloader, 500);
     
     // Handle Navigation Menu 
     HandleNavigationMenu(); 
@@ -58,6 +57,7 @@ function SetupInitialScene(){
         $('.overlay').addClass('show'); 
         $('.nav-home').addClass('animate');
         $('.scroll-area').addClass('animate');
+        $('.msg-love').addClass('animate');
         
         setTimeout(function(){
             $('.nav-home').removeClass('animate');
@@ -71,6 +71,7 @@ function SetupInitialScene(){
     }else{
         $('.nav-home').addClass('animate');
         $('.scroll-area').addClass('animate');
+        $('.msg-love').addClass('animate');
 
         setTimeout(function(){
             $('.overlay').removeClass('show'); 

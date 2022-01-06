@@ -11,6 +11,8 @@ body.freeze {
   box-sizing: border-box;
 }
 p {
+  margin: 0;
+  padding: 10px 0;
   line-height: calc(1.5em + 0.2vw);
 }
 a {
@@ -116,6 +118,31 @@ h1, h2{
   min-height: 100vh;
   background-color: #3f55a1;
 }
+.msg-love{
+    position: fixed;
+    right: 5px;
+    top: 5px;
+    z-index: 2;
+    font-size: 11px;
+    border-radius: 5px;
+    padding: 3px 7px;
+    background-color: #ffffff2b;
+    font-weight: 100;
+    color: #ddd;
+    box-shadow: 2px 2px 0px 3px #00000012;
+    opacity: 1;
+    transition: all 0.5s ease;
+    transform: translateX(100%);
+    backdrop-filter: blur(10px);
+}
+.msg-love.animate{
+    transform: translateX(0); 
+}
+.msg-love .heart {
+  font-size: 14px;
+  color: #9d2121;
+}
+
 .nav-toggle {
   width: 100px;
   height: 100px;
@@ -368,6 +395,76 @@ blockquote p {
   color: #fff;
   width: 100%;
 }
+
+.grid_work{
+  transform: translateX(20px);
+}
+
+.row{
+  padding: 0 0 40px 0;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.row:last-child {
+  padding: 0;
+}
+.row:before {
+  content: "";
+  border: 2px solid rgb(255 255 255 / 16%);
+  position: absolute;
+  left: -20px;
+  width: 10px;
+  top: 10px;
+  border-radius: 2px;
+  background-color: rgb(255 255 255 / 16%);
+}
+.row:after {
+  content: "";
+  border: 2px solid rgb(255 255 255 / 16%);
+  position: absolute;
+  left: -20px;
+  height: 100%;
+  top: 10px; 
+  border-radius: 2px;
+  background-color: rgb(255 255 255 / 16%);
+}
+.row:last-child:after {
+  height: calc(100% - 20px);
+  border-radius: 2px 2px;
+}
+
+.cell{
+  margin-bottom: 15px;
+}
+.cell .key{
+  background: rgb(255 255 255 / 16%);
+  padding: 3px 10px 2px 10px;
+  border-radius: 3px;
+  display: block;
+  width: max-content;
+  margin-bottom: 5px;
+}
+
+.cell a{ 
+  transition: all .3s ease-in-out;
+}
+.cell a:after {
+  content: "";
+  border-left: 6px solid transparent;
+  border-right: 6px solid #fff;
+  border-top: 6px solid #fff;
+  border-bottom: 6px solid transparent;
+  display: inline-block;
+  border-radius: 2px;
+  transition: all .3s ease-in-out;
+}
+.cell a:hover:after {
+  transform: translate(5px, -5px);
+}
+
+
 
 form {
   background: rgb(255 255 255 / 16%);
