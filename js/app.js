@@ -7,14 +7,14 @@ $('document').ready(function(e){
     
     // Loading page preloader handler
     $('body').addClass('freeze');
-    setTimeout(HandlePreloader, 500);
+    setTimeout(HandlePreloader, 5000);
     
     // Handle Navigation Menu 
     HandleNavigationMenu(); 
 
     // Set nav menu state based on url hash
     SetNavigationMenuState();
-
+    
     // Index page navigation menu hover 
     $('.nav-menu li').on('click',ToggleMenuStatus);
     
