@@ -1,7 +1,7 @@
 {
   "Post": {
     "title": { "string": {} },
-    "customerId" : {"int" : {} }
+    "customerId" : {"string" : {} }
   },
   "Comment": {
     "body": { "string": {} },
